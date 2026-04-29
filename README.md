@@ -1,8 +1,8 @@
-# Cyber Threat Forecasting using XGBoost and LSTM & GRU with Attention
+# Cyber Threat Forecasting using XGBoost, LSTM & GRU with Attention
 
 This projected is completed using **prompt engineering with ChatGPT**. 
 
-Demo app deployed to Streamlit Cloud at 
+Demo app deployed to Streamlit Cloud [link](https://morinousagi-cyber-threat-forecast-rnn-xgb.streamlit.app)
 
 ## Overview
 
@@ -59,7 +59,6 @@ For each threat metric:
 
 - Create 14 lag features
 - Use multivariate inputs
-- No data leakage
 - TimeSeriesSplit cross-validation
 
 ---
@@ -87,9 +86,9 @@ Metrics:
 Additional evaluation:
 
 - Actual vs Predicted plot
-- Residual analysis
-- Residual distribution
-- Feature importance ranking
+- Residual analysis (XGBoost)
+- Residual distribution (XGBoost)
+- Feature importance ranking (XGBoost)
 
 ---
 
@@ -102,7 +101,7 @@ The XGBoost model achieved:
 
 Tree-based regression proved more suitable than RNN for this medium-sized structured dataset.
 
-Both GRU & LSTM produced **negative R2**.
+Both GRU & LSTM produced **negative R²**.
 
 ```
 LSTM epochs: 15
