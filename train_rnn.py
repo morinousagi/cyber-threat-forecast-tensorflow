@@ -63,7 +63,7 @@ plt.figure()
 plt.plot(hist_lstm.history["loss"], label="LSTM")
 plt.plot(hist_gru.history["loss"], label="GRU")
 plt.legend()
-plt.savefig("artifacts/training_loss.png")
+plt.savefig("artifacts/rnn_training_loss.png")
 
 # Plot Predictions
 plt.figure()
@@ -71,7 +71,7 @@ plt.plot(lstm_metrics[4], label="Actual")
 plt.plot(lstm_metrics[3], label="LSTM")
 plt.plot(gru_metrics[3], label="GRU")
 plt.legend()
-plt.savefig("artifacts/predictions.png")
+plt.savefig("artifacts/rnn_predictions.png")
 
 # Select Best Model
 if lstm_metrics[0] < gru_metrics[0]:
@@ -81,5 +81,5 @@ else:
     best_model = gru
     print("Best Model: GRU")
 
-best_model.save("artifacts/best_model.keras")
-joblib.dump(scaler, "artifacts/scaler.joblib")
+best_model.save("artifacts/best_rnn_model.keras")
+joblib.dump(scaler, "artifacts/rnn_scaler.joblib")
